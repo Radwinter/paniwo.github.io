@@ -1,0 +1,2690 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+    <title>Hyperbolic tree</title>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="dcterms.rightsHolder" content="Copyright © 2018 Glatzhofer Michael">
+    
+    <link rel="stylesheet" href="d3-hypertree-light.css" id="ldswitch">        
+
+    <script src="d3-hypertree.js"></script>
+    </head>
+    <body>
+        <script>  
+            const ht = new hyt.Hypertree(
+                { parent: document.body },
+                { 
+                    langInitBFS: (ht, n)=> {                
+                        n.precalc.label = n.data.name                        
+                    },
+                    dataloader: ok => ok({
+                        name:'Partizipative Formate',
+                        children:[
+                            { 	
+								name: 'Kleingruppe bis 10 Personen',
+								children: [
+                                    { 
+										name: 'Information',
+										children: [
+										{ 
+											name: 'dauerhafte Partizipation',
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Informationen vermitteln', 
+														children: [
+														{ 
+															name: 'Teilnahme schriftlich',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Newsletter' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Newsletter' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													]
+												},
+												]
+											},
+											]
+										},
+										{ 
+											name: 'einmalige Partizipation', 
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Informationen vermitteln', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													{ 
+														name: 'Nutzen: Innovationen fördern', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Fokusgruppen' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Fokusgruppen' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													{ 
+														name: 'Nutzen: Arbeitsgestaltung', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																		{ name: 'Fokusgruppen' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																		{ name: 'Fokusgruppen' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													]
+												},
+												]
+											},
+											]
+										},
+										{ 
+											name: 'befristete Partizipation', 
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Arbeitsgestaltung', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Qualitätszirkel' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Qualitätszirkel' },
+																	]
+																},
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Ideenwettbewerb' },
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'Teilnahme schriftlich',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Ideenwettbewerb' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													]
+													},
+												]
+											},
+											]
+										},
+										]
+									},
+                                    { 
+										name: 'Konsultation',
+										children: [
+										{ 
+											name: 'einmalige Partizipation', 
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Informationen vermitteln', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													{ 
+														name: 'Nutzen: Innovationen fördern', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Fokusgruppen' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Fokusgruppen' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													{ 
+														name: 'Nutzen: Arbeitsgestaltung', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																		{ name: 'Fokusgruppen' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																		{ name: 'Fokusgruppen' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													]
+												},
+												]
+											},
+											]
+										},
+										{ 
+											name: 'befristete Partizipation', 
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Arbeitsgestaltung', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Qualitätszirkel' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Qualitätszirkel' },
+																	]
+																},
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Ideenwettbewerb' },
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'Teilnahme schriftlich',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Ideenwettbewerb' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													]
+													},
+												]
+											},
+											]
+										},
+										{ 
+											name: 'dauerhafte Partizipation',
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Arbeitsgestaltung', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Teilautonome Arbeitsgruppe' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Teilautonome Arbeitsgruppe' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													]
+												},
+												]
+											},
+											]
+										},
+										]
+									},
+									{ 
+										name: 'Mitbestimmung', 
+										children: [
+										{ 
+											name: 'dauerhafte Partizipation',
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Arbeitsgestaltung', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Teilautonome Arbeitsgruppe' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Teilautonome Arbeitsgruppe' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													]
+												},
+												]
+											},
+											]
+										},
+										]
+									},
+								]	
+							},
+                            { 
+								name: 'Mittlere Gruppe 11-29 Personen',
+								children: [
+									{ 	name: 'Information', 
+										children: [
+										{ 
+											name: 'dauerhafte Partizipation',
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Informationen vermitteln', 
+														children: [
+														{ 
+															name: 'Teilnahme schriftlich',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Newsletter' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Newsletter' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													]
+												},
+												]
+											},
+											]
+										},
+										{
+											name: 'befristete Partizipation', 
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Arbeitsgestaltung', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Qualitätszirkel' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Qualitätszirkel' },
+																	]
+																},
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Ideenwettbewerb' },
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'Teilnahme schriftlich',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Ideenwettbewerb' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													{ 
+														name: 'Nutzen: Innovationen fördern', 
+														children: [
+														{ 
+															name: 'Teilnahme in Präsenz',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Qualitätszirkel' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Qualitätszirkel' },
+																	]
+																},
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Ideenwettbewerb' },
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'Teilnahme schriftlich',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Ideenwettbewerb' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													]
+												},
+												{ 
+													name: 'mittlere Planungsdauer',
+													children: [
+														{ 
+															name: 'Information sammeln',
+															children: [
+																{ 
+																	name: 'Teilnahme online',
+																	children: [
+																		{ 
+																			name: 'ohne Moderator',
+																			children: [
+																				{ name: 'Mitarbeiterbefragung' },
+																			]	
+																		},
+																	]	
+																},
+																{ 
+																	name: 'Teilnahme schriftlich',
+																	children: [
+																		{ 
+																			name: 'ohne Moderator',
+																			children: [
+																				{ name: 'Mitarbeiterbefragung' },
+																			]	
+																		},
+																	]
+																},
+															]	
+														},
+														{ 
+															name: 'Innovationen fördern',
+															children: [
+																{ 
+																	name: 'Teilnahme in Präsenz', 
+																	children: [
+																	{ 
+																		name: 'mit Moderator',
+																		children: [
+																			{ name: 'Qualitätszirkel' },
+																		]
+																	},
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'Arbeitsgestaltung',
+															children: [
+																{ 
+																	name: 'Teilnahme in Präsenz', 
+																	children: [
+																	{ 
+																		name: 'mit Moderator',
+																		children: [
+																			{ name: 'Qualitätszirkel' },
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Teilnahme online', 
+																	children: [
+																	{ 
+																		name: 'mit Moderator',
+																		children: [
+																			{ name: 'Qualitätszirkel' },
+																		]
+																	},
+																	]
+																},
+															]
+														},
+													]
+												}	
+												]
+											},
+											{ 
+												name: 'mäßige Kosten',
+												children: [
+													{ 
+														name: 'mittlere Planungsdauer',
+														children: [
+															{ 
+															name: 'Innovationen fördern',
+															children: [
+																{ 
+																	name: 'Teilnahme in Präsenz', 
+																	children: [
+																	{ 
+																		name: 'mit Moderator',
+																		children: [
+																			{ name: 'Qualitätszirkel' },
+																		]
+																	},
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'Arbeitsgestaltung',
+															children: [
+																{ 
+																	name: 'Teilnahme in Präsenz', 
+																	children: [
+																	{ 
+																		name: 'mit Moderator',
+																		children: [
+																			{ name: 'Qualitätszirkel' },
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Teilnahme online', 
+																	children: [
+																	{ 
+																		name: 'mit Moderator',
+																		children: [
+																			{ name: 'Qualitätszirkel' },
+																		]
+																	},
+																	]
+																},
+															]
+														},
+														]
+													},
+													{ 
+														name: 'kurze Planungsdauer',
+														children: [
+															{ 
+															name: 'Innovationen fördern',
+															children: [
+																{ 
+																	name: 'Teilnahme in Präsenz', 
+																	children: [
+																	{ 
+																		name: 'mit Moderator',
+																		children: [
+																			{ name: 'Qualitätszirkel' },
+																		]
+																	},
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'Arbeitsgestaltung',
+															children: [
+																{ 
+																	name: 'Teilnahme in Präsenz', 
+																	children: [
+																	{ 
+																		name: 'mit Moderator',
+																		children: [
+																			{ name: 'Qualitätszirkel' },
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Teilnahme online', 
+																	children: [
+																	{ 
+																		name: 'mit Moderator',
+																		children: [
+																			{ name: 'Qualitätszirkel' },
+																		]
+																	},
+																	]
+																},
+															]
+														},
+														]
+													},
+												]
+											},
+											]
+										},
+										{ 	name: 'einmalige Partizipation',
+											children: [
+												{ 
+													name: 'geringe Kosten',
+													children: [
+														{ 
+															name: 'kurze Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Informationen vermitteln', 
+																	children: [
+																	{ 
+																		name: 'Teilnahme in Präsenz',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																			]
+																			},
+																		]														
+																	},
+																	{ 
+																		name: 'Teilnahme online',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung', 
+																	children: [
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]
+														},
+														]
+													},
+															]
+														},
+													]
+												},
+												{ 
+													name: 'mäßige Kosten',
+													children: [
+														{ 
+															name: 'kurze Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Informationen vermitteln', 
+																	children: [
+																	{ 
+																		name: 'Teilnahme in Präsenz',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																			]
+																			},
+																		]														
+																	},
+																	{ 
+																		name: 'Teilnahme online',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung', 
+																	children: [
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]
+														},
+														]
+													},
+															]
+														},
+														{ 
+															name: 'mittlere Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Informationen vermitteln', 
+																	children: [
+																	{ 
+																		name: 'Teilnahme in Präsenz',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																			]
+																			},
+																		]														
+																	},
+																	{ 
+																		name: 'Teilnahme online',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung', 
+																	children: [
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													{ 
+																	name: 'Nutzen: Arbeitsgestaltung', 
+																	children: [
+																	{ 
+																		name: 'Teilnahme in Präsenz',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Workshop' },
+																			]
+																			},
+																		]														
+																	},
+																	{ 
+																		name: 'Teilnahme außerhalb des Unternehmens',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Workshop' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Innovationen fördern', 
+																	children: [
+																	{ 
+																		name: 'Teilnahme in Präsenz',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Workshop' },
+																			]
+																			},
+																		]														
+																	},
+																	{ 
+																		name: 'Teilnahme außerhalb des Unternehmens',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Workshop' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+															]
+														},
+													]
+												},
+											]
+										},
+										]
+									},
+									{ 
+										name: 'Konsultation',
+										children: [
+										{ 	name: 'einmalige Partizipation',
+											children: [
+												{ 
+													name: 'geringe Kosten',
+													children: [
+														{ 
+															name: 'kurze Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Informationen vermitteln', 
+																	children: [
+																	{ 
+																		name: 'Teilnahme in Präsenz',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																			]
+																			},
+																		]														
+																	},
+																	{ 
+																		name: 'Teilnahme online',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung', 
+																	children: [
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]
+														},
+														]
+													},
+															]
+														},
+													]
+												},
+												{ 
+													name: 'mäßige Kosten',
+													children: [
+														{ 
+															name: 'kurze Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Informationen vermitteln', 
+																	children: [
+																	{ 
+																		name: 'Teilnahme in Präsenz',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																			]
+																			},
+																		]														
+																	},
+																	{ 
+																		name: 'Teilnahme online',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung', 
+																	children: [
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]
+														},
+														]
+													},
+															]
+														},
+														{ 
+															name: 'mittlere Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Informationen vermitteln', 
+																	children: [
+																	{ 
+																		name: 'Teilnahme in Präsenz',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																			]
+																			},
+																		]														
+																	},
+																	{ 
+																		name: 'Teilnahme online',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Betriebsversammlung' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung', 
+																	children: [
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'mit Moderator',
+																	children: [
+																		{ name: 'Betriebsversammlung' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													{ 
+																	name: 'Nutzen: Arbeitsgestaltung', 
+																	children: [
+																	{ 
+																		name: 'Teilnahme in Präsenz',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Workshop' },
+																					{ name: 'World Cafe' },
+																					{ name: 'Open Space Konferenz' },
+																			]
+																			},
+																		]														
+																	},
+																	{ 
+																		name: 'Teilnahme außerhalb des Unternehmens',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Workshop' },
+																					{ name: 'World Cafe' },
+																					{ name: 'Open Space Konferenz' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Innovationen fördern', 
+																	children: [
+																	{ 
+																		name: 'Teilnahme in Präsenz',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Workshop' },
+																					{ name: 'World Cafe' },
+																					{ name: 'Open Space Konferenz' },
+																			]
+																			},
+																		]														
+																	},
+																	{ 
+																		name: 'Teilnahme außerhalb des Unternehmens',
+																		children: [
+																			{ 
+																				name: 'mit Moderator',
+																				children: [
+																					{ name: 'Workshop' },
+																					{ name: 'World Cafe' },
+																					{ name: 'Open Space Konferenz' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+															]
+														},
+													]
+												},
+											]
+										},
+										]
+									},
+									{ 
+										name: 'Mitbestimmung', 
+										children: [
+											{ 
+												name: 'einmalige Partizipation',
+												children: [
+													{ 
+														name: 'mäßige Kosten', 
+														children: [
+															{ 
+																name: 'mittlere Planungsdauer', 
+																children: [
+																	{ 
+																		name: 'Nutzen: Arbeitsgestaltung',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'World Cafe' },
+																							{ name: 'Open Space Konferenz' },
+																						]
+																					},
+																				]	
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'World Cafe' },
+																							{ name: 'Open Space Konferenz' },
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																	{ 
+																		name: 'Nutzen: Innovationen fördern',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'World Cafe' },
+																							{ name: 'Open Space Konferenz' },
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'World Cafe' },
+																							{ name: 'Open Space Konferenz' },
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+														]
+													
+													},
+												]
+											},
+											
+										]
+									},
+								]
+							},
+                            { 
+								name: 'Großgruppe ab 30 Personen',
+								children: [
+									{ 
+										name: 'Information',
+										children: [
+										{ 
+											name: 'dauerhafte Partizipation',
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Informationen vermitteln', 
+														children: [
+														{ 
+															name: 'Teilnahme schriftlich',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Newsletter' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Newsletter' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													{
+														name: 'Nutzen: Innovationen fördern',
+														children: [
+															{
+																name: 'Teilnahme online',
+																children: [
+																	{
+																		name: 'ohne Moderator',
+																		children: [
+																			{ name: 'Social Intranet' },
+																		]
+																	}
+																]
+															},
+														]
+													}
+													]
+												},
+												]
+											},
+											]
+										},
+										{
+											name: 'befristete Partizipation',
+											children: [
+												{ 
+													name: 'geringe Kosten',
+													children: [
+														{ 
+															name: 'kurze Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung', 
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'ohne Moderator',
+																					children: [
+																						{ name: 'Ideenwettbewerb' },
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme schriftlich',
+																			children: [
+																				{ 
+																					name: 'ohne Moderator',
+																					children: [
+																						{ name: 'Ideenwettbewerb' },
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Innovationen fördern', 
+																	children: [
+																		{ 
+																			name: 'Teilnahme schriftlich',
+																			children: [
+																				{ 
+																					name: 'ohne Moderator',
+																					children: [
+																						{ name: 'Ideenwettbewerb' },
+																					]
+																				},
+																			]														
+																		},
+																	{ 
+																		name: 'Teilnahme online',
+																		children: [
+																			{ 
+																				name: 'ohne Moderator',
+																				children: [
+																					{ name: 'Ideenwettbewerb' },
+																				]
+																			},
+																		]
+																	},
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'mittlere Planungsdauer',
+															children: [
+																{ 
+																		name: 'Information sammeln',
+																		children: [
+																			{ 
+																				name: 'Teilnahme online',
+																				children: [
+																					{ 
+																						name: 'ohne Moderator',
+																						children: [
+																							{ name: 'Mitarbeiterbefragung' },
+																						]	
+																					},
+																				]	
+																			},
+																			{ 
+																				name: 'Teilnahme schriftlich',
+																				children: [
+																					{ 
+																						name: 'ohne Moderator',
+																						children: [
+																							{ name: 'Mitarbeiterbefragung' },
+																						]	
+																					},
+																				]
+																			},
+																		]	
+																	},
+															]
+														},
+													]
+												},
+											]
+										},
+										{ 
+											name: 'einmalige Partizipation',
+											children: [
+												{ 
+													name: 'hohe Kosten',
+													children: [
+														{ 
+															name: 'lange Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Informationen vermitteln',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'mittlere Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Informationen vermitteln',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+															]
+														},
+													]
+												},
+												{ 
+													name: 'mäßige Kosten',
+													children: [
+														{ 
+															name: 'lange Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Informationen vermitteln',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'mittlere Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																						{ name: 'Workshop'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme außerhalb des Unternehmens',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Workshop'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Informationen vermitteln',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Innovationen fördern',
+																	children: [
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Workshop'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme außerhalb des Unternehmens',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Workshop'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+															]
+														},
+													]
+												},
+											]
+										},
+										]
+									},
+									{ 
+										name: 'Konsultation',
+										children: [
+											{ 
+											name: 'dauerhafte Partizipation',
+											children: [
+											{ 
+												name: 'geringe Kosten',
+												children: [
+												{ 
+													name: 'kurze Planungsdauer',
+													children: [
+													{ 
+														name: 'Nutzen: Informationen vermitteln', 
+														children: [
+														{ 
+															name: 'Teilnahme schriftlich',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Newsletter' },
+																	]
+																},
+															]														
+														},
+														{ 
+															name: 'Teilnahme online',
+															children: [
+																{ 
+																	name: 'ohne Moderator',
+																	children: [
+																		{ name: 'Newsletter' },
+																	]
+																},
+															]
+														},
+														]
+													},
+													{
+														name: 'Nutzen: Innovationen fördern',
+														children: [
+															{
+																name: 'Teilnahme online',
+																children: [
+																	{
+																		name: 'ohne Moderator',
+																		children: [
+																			{ name: 'Social Intranet' },
+																		]
+																	}
+																]
+															},
+														]
+													}
+													]
+												},
+												]
+											},
+											]
+										},
+										{ 
+											name: 'einmalige Partizipation',
+											children: [
+												{ 
+													name: 'hohe Kosten',
+													children: [
+														{ 
+															name: 'lange Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																						{ name: 'Zukunftskonferenz'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme außerhalb des Unternehmens',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Zukunftskonferenz'},
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Informationen vermitteln',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Innovationen fördern',
+																	children: [
+																		{ 
+																			name: 'Teilnahme außerhalb des Unternehmens',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Zukunftskonferenz'},
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Zukunftskonferenz'},
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'mittlere Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme außerhalb des Unternehmens',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Informationen vermitteln',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{
+																	name: 'Nutzen: Innovationen fördern',
+																	children: [
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme außerhalb des Unternehmens',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+															]
+														},
+													]
+												},
+												{ 
+													name: 'mäßige Kosten',
+													children: [
+														{ 
+															name: 'lange Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme außerhalb des Unternehmens',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Informationen vermitteln',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+															]
+														},
+														{ 
+															name: 'mittlere Planungsdauer',
+															children: [
+																{ 
+																	name: 'Nutzen: Arbeitsgestaltung',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																						{ name: 'Workshop'},
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme außerhalb des Unternehmens',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Workshop'},
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Informationen vermitteln',
+																	children: [
+																		{ 
+																			name: 'Teilnahme online',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Betriebsversammlung'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+																{ 
+																	name: 'Nutzen: Innovationen fördern',
+																	children: [
+																		{ 
+																			name: 'Teilnahme in Präsenz',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Workshop'},
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																		{ 
+																			name: 'Teilnahme außerhalb des Unternehmens',
+																			children: [
+																				{ 
+																					name: 'mit Moderator',
+																					children: [
+																						{ name: 'Workshop'},
+																						{ name: 'World Cafe'},
+																						{ name: 'Open Space Konferenz'},
+																					]
+																				},
+																			]
+																		},
+																	]
+																},
+															]
+														},
+													]
+												},
+											]
+										},
+										]
+									},
+									{ 
+										name: 'Mitbestimmung',
+										children: [
+											{ 
+												name: 'einmalige Partizipation',
+												children: [
+													{ 
+														name: 'mäßige Kosten',
+														children: [
+															{ 
+																name: 'lange Planungsdauer',
+																children: [
+																	{ 
+																		name: 'Nutzen: Arbeitsgestaltung',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																	{ 
+																		name: 'Nutzen: Innovationen fördern',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+															{ 
+																name: 'mittlere Planungsdauer',
+																children: [
+																	{ 
+																		name: 'Nutzen: Arbeitsgestaltung',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																	{ 
+																		name: 'Nutzen: Innovationen fördern',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+														]
+													},
+													{ 
+														name: 'hohe Kosten',
+														children: [
+															{ 
+																name: 'lange Planungsdauer',
+																children: [
+																	{ 
+																		name: 'Nutzen: Arbeitsgestaltung',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																	{ 
+																		name: 'Nutzen: Innovationen fördern',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+															{ 
+																name: 'mittlere Planungsdauer',
+																children: [
+															{ 
+																name: 'lange Planungsdauer',
+																children: [
+																	{ 
+																		name: 'Nutzen: Arbeitsgestaltung',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																	{ 
+																		name: 'Nutzen: Innovationen fördern',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+															{ 
+																name: 'mittlere Planungsdauer',
+																children: [
+																	{ 
+																		name: 'Nutzen: Arbeitsgestaltung',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'Zukunftskonferenz'},
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																	{ 
+																		name: 'Nutzen: Innovationen fördern',
+																		children: [
+																			{ 
+																				name: 'Teilnahme in Präsenz',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																			{ 
+																				name: 'Teilnahme außerhalb des Unternehmens',
+																				children: [
+																					{ 
+																						name: 'mit Moderator',
+																						children: [
+																							{ name: 'World Cafe'},
+																							{ name: 'Open Space Konferenz'},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+														]
+															},
+														]
+													},
+												]
+											},
+										]
+									},
+								]
+							},
+                        ]
+                    }),
+                    interaction: {
+                        λbounds: [ .4, .8 ],
+                    }                 
+                }
+            )
+            ht.initPromise
+                .then(()=> new Promise((ok, err)=> ht.animateUp(ok, err)))            
+                .then(()=> ht.drawDetailFrame())               
+        </script>
+    </body>
+</html>
